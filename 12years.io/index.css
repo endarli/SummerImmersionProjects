@@ -1,0 +1,258 @@
+/*paragraphs*/
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f0f2f7ff;
+  transition: background-color .5s;
+  background-image: url("pics/elephant.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100%;
+  height: 100%;
+  margin-top: 0px;
+}
+
+h1 {
+  color: grey
+}
+h2 {
+  font-size: 50px;
+  color: black;
+  margin-top: 0px;
+  font-weight: normal;
+}
+h3 {
+  font-size: 40px;
+  color: black;
+  font-weight: normal;
+}
+p {
+  color: grey;
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  column-count: 4;
+  column-gap: 20px;
+
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 70px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #818181;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+#sidebar {
+  padding: 32px 8px 8px 24px;
+  font-size: 17px;
+}
+#sidebar1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  padding-bottom: 2px;
+  font-family: 'Playfair Display', serif;
+  margin-top: 42px;
+}
+#sidebar2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  padding-top: 23px;
+  padding-bottom: 2px;
+}
+
+#bot {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  bottom: 25px;
+  left: 8px;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+@media screen and (max-height: 670px) {
+  .card {
+    font-size: 12px;
+  }
+}
+.card {
+   padding: 20px;
+   position: absolute;
+   top: 20%;
+   right: 10%;
+   width: 230px;
+   background-color: #f0f2f7ff;
+   opacity: .55;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  height: 300px;
+  width: 300px;
+}
+/* Responsive columns */
+@media screen and (max-width: 900px) {
+  .column1 {
+    width: 100% !important;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .row {
+    margin-top: 220% !important;
+  }
+  .top-center {
+    font-size: 30px !important
+  }
+  .bottom-center {
+    top:43%;
+    font-size: 19px !important;
+    line-height: 1 !important;
+  }
+}
+.column1 {
+  float: left;
+  width: 40%;
+  padding: 0 5% 5% 5%;
+}
+.bottomleft{
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+}
+.leftcolumn {
+  float: left;
+  width: fit-content;
+}
+.rightcolumn {
+  float: right;
+  height: -webkit-fill-available;
+}
+.image {
+  margin: 8% 7.5% 10% 7.5%;
+  opacity: .4;
+  width: 80%;
+  height: 500px;
+  box-shadow: 17px 23px #ced4e4;
+}
+/* mission */
+.container {
+  margin-top: 35%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* Bottom left text */
+.bottom-center {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 75%;
+  left: 50%;
+  line-height: 160%;
+  top: 55%;
+  font-size: 30px;
+  color: black;
+  margin-top: 0px;
+  font-weight: normal;
+}
+/* Top left text */
+.top-center {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  font-size: 40px;
+  color: black;
+  margin-top: 0px;
+  font-weight: normal;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

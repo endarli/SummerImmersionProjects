@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <script type="text/javascript">
+    var unirest = require("unirest");
+
+    var req = unirest("GET", "https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all");
+
+    req.headers({
+	     "x-rapidapi-host": "ajayakv-rest-countries-v1.p.rapidapi.com",
+	     "x-rapidapi-key": "SIGN-UP-FOR-KEY"
+    });
+
+
+    req.end(function (res) {
+	     if (res.error) throw new Error(res.error);
+
+    console.log(res.body);
+    });
+
+    function UserAction() {
+    var xhttp = new XMLHttpRequest("https://restcountries.eu/rest/v2/all");
+    xhttp.open("POST", "https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", true);
+    xhttp.setRequestHeader("name", "application/json");\
+    }
+
+    xhttp
+    </script>
+  </head>
+
+  <body>
+  </body>
+  </html>

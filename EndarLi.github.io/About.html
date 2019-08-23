@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<link rel = "stylesheet" href = "format.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+  <head>
+    <h1>
+      Endar Li
+    </h1>
+  </head>
+
+  <body>
+    <center>
+    <div class="topnav">
+      <a href="Home.html">Home</a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">About</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#About">About</a>
+            <a href="#Videos">Videos</a>
+            <a href="#Timeline">Timeline</a>
+          </div>
+          </div>
+      <a href="Life.html">People in My Life</a> <a href="Survey.html">Survey</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+  <div class="row">
+    <div class="leftcolumn">
+    <div class="card" id="About">
+      <h2>About</h2>
+      <h5>July 30, 2019</h5>
+      <img
+      src="pics/wordcloud.png" alt="wordcloud" width=85%>
+      <p>
+      Hi! My name is Endar and here are some things that I love.
+    </p>
+    </div>
+
+    <div class="card" id="Videos">
+      <h2>Videos</h2>
+      <h5>Apr 24, 2019</h5>
+      <video width=85% controls>
+        <source src="Competition Season 2019.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>A video I made of the 2019 champs trip on my robotics team</p>
+      <h5>May 8, 2019</h5>
+      <video width=85% controls>
+        <source src="A snippet of 2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>A short video of me and my team touring 2 Sigma, an investment company that sponsors FIRST Robotics.</p>
+      <br>
+    </div>
+
+    <div class="card" id="Timeline">
+      <h2>Timeline</h2>
+      <h5>Jan 24, 2002</h5>
+      <img
+      src="pics/codeboy.gif" alt="code_boy" width=80%>
+      <p>Endar was born.</p>
+      <h5>August 20, 2017</h5>
+      <img
+      src="pics/sign1.JPG" alt="six flags" width=80%>
+      <p>Endar and her friends pulled some gangs signs at six flags.</p>
+      <h5>Jul 9, 2019</h5>
+      <img
+      src="pics/shape.PNG" alt="SHAPE" width=80%>
+      <p>Endar baked cookies with a solar oven that she built with her team, featuring her TA!</p>
+    </div>
+    </div>
+
+    <div class="sticky">
+    <div class="rightcolumn">
+    <div class="card">
+      <h3>Entertainment</h3>
+      <img
+      src="pics/done.jpg" alt="dog that is done" width=90%>
+      <br>
+      <p style="margin-block-start:5px; margin-block-end:5px;"> Steve is not happy with your bs.</p>
+      <br>
+      <a href="Entertainment.html" class="button">Click for More!</a>
+    </div>
+
+    <div class="card">
+      <h3>Info</h3>
+        <a href="https://www.instagram.com/endar.li/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/endar.lii/" class="fa fa-facebook"></a>
+        <a href="mailto:twelfth.year.2019@gmail.com" class="fa fa-google"></a>
+        <a href="https://www.youtube.com/channel/UCq59XijJHARAh4sDzhc2USQ" class="fa fa-youtube"></a>
+        <br>
+        <br>
+        <p2>
+        <div class="botlink">
+          <a href="Home.html">Home</a>&nbsp;|
+          <a href="About.html">About</a>&nbsp;|
+          <a href="People_In_My_Life.html">People</a>&nbsp;|
+          <a href="Survey.html">Survey</a>
+        </div>
+        @ 2019</p2>
+    </div>
+    </div>
+    </div>
+  </div>
+  </body>
+
+</html>

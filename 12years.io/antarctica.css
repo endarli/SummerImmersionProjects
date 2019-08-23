@@ -1,0 +1,196 @@
+body {
+  background-image: url('pics/seal2.jpg');
+  background-color: #f0f2f7ff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top;
+  background-size: 100%;
+  margin: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+h1{
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  margin-top: 0px !important;
+  font-weight: normal;
+}
+h3 {
+  padding-top: 0px;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 35px;
+}
+h4 {
+  color: grey;
+}
+p {
+  color: white;
+  line-height: 2;
+  text-align: justify;
+  width: 60%;
+  font-size: 20px;
+}
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  column-count: 4;
+  column-gap: 20px;
+
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #818181;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+#sidebar {
+  padding: 32px 8px 8px 24px;
+  font-size: 17px;
+}
+#sidebar1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  padding-bottom: 2px;
+  font-family: 'Playfair Display', serif;
+  margin-top: 42px;
+}
+#sidebar2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  padding-top: 23px;
+  padding-bottom: 2px;
+}
+
+#bot {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  transition: 0.3s;
+  bottom: 25px;
+  left: 8px;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.bottomleft{
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+}
+
+.leftcolumn {
+  float: left;
+  width: fit-content;
+}
+
+.rightcolumn {
+  float: right;
+  height: -webkit-fill-available;
+}
+
+.card1 {
+  opacity: 0.6;
+  width: 1250px;
+  height: 550px;
+  background-color: black;
+}
+
+.card {
+   padding: 2% 0px 10px 20px;
+   margin: 0px;
+   background-color: #f0f2f7ff;
+   opacity: .5;
+   width: 40%;
+   float:left;
+   text-align: justify;
+}
+
+@media screen and (max-width: 735px) {
+  h4 {
+    font-size: 10px;
+  }
+  .card3 {
+    margin-bottom: 12% !important;
+  }
+}
+.card2 {
+  left: 50px;
+  width: 45%;
+  height:100%;
+  margin-top: 15%;
+  }
+.card3 {
+  opacity: 1;
+  width: 35%;
+  margin: 11% 10% 5% 10%;
+}
+
+.container1 {
+  margin-left: 25%;
+  height: 100%;
+  width: 80%;
+}
+
+.container2 {
+  margin-left: 10px;
+  height: 100%;
+  width: 80%;
+}
+
+.row {
+  opacity: 0.6;
+  width: 85%;
+  height: 370px;
+  background-color: black;
+}
+.container {
+  box-shadow: 8.5px 11.5px #e4d4ce;
+  background-color:#ede2de;
+  padding: 4px 4px 0px 4px;
+}
